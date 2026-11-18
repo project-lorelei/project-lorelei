@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Lorelei: the sex bureau</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    
+<header class="header">
+    <a class="logo" href="#home">CHARACTER AI BOTS</a>
+    <nav class="navigation" aria-label="Основная навигация">
+        <a href="#catalog">Персонажи</a>
+        <a href="#series">Серии</a>
+         <a href="#my-library">Фавориты</a>
+        <a href="#compass">Подборка</a>
+
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+
+<div class="hero-texture" aria-hidden="true"></div>
+
+<!-- HERO DECORATIONS -->
+<div class="hero-edition" aria-hidden="true">
+    <span>INDEPENDENT CHARACTER ARCHIVE</span>
+    <span>EST. 2026</span>
+
+</div>
+
+<div class="hero-side-label" aria-hidden="true">
+    <span>VOL.</span>
+    <span>001</span>
+    <span class="side-line"></span>
+    <span>SEX</span>
+</div>
+
+<div class="hero-cross cross-one" aria-hidden="true">+</div>
+<div class="hero-cross cross-two" aria-hidden="true">+</div>
+
+
+
+<div class="hero-scroll" aria-hidden="true">
+    <span>SCROLL TO DISCOVER</span>
+    <span class="scroll-line"></span>
+</div>
+
+        <div class="hero-content">
+            
+            <h1>Project Lorelei:<br>the sex bureau</h1>
+            <p class="hero-description">Добро пожаловать в мир, где фантазии становятся реальностью.</p>
+            <a href="#catalog" class="main-button">СМОТРЕТЬ ПЕРСОНАЖЕЙ</a>
+        </div>
+        <!-- Элемент для растворяющейся картинки с каблуками -->
+        <div class="hero-heels-bg"></div>
+    </section>
+
+    <!-- MOBILE NAVIGATION -->
+<nav class="mobile-navigation" aria-label="Основная навигация">
+    <a href="#catalog">Персонажи</a>
+    <a href="#series">Серии</a>
+    <a href="#my-library">Фавориты</a>
+    <a href="#compass">Подборка</a>
+</nav>
+
+<section id="series" class="coming-soon-section" hidden>
+
+    <div class="coming-soon-top">
+        EXPECTATION
+        <span>2026</span>
+    </div>
+
+    <div class="coming-soon-content">
+
+        <div class="coming-soon-overline">
+            SECTION UNDER DEVELOPMENT
+        </div>
+
+        <div class="coming-soon-line"></div>
+
+        <h1>SOMETHING IS TAKING SHAPE.</h1>
+
+        <p class="coming-soon-description">
+            В ДАННЫЙ МОМЕНТ ЭТОТ РАЗДЕЛ НАХОДИТСЯ В РАЗРАБОТКЕ.
+        </p>
+
+        <div class="coming-soon-hourglass">
+    <img src="assets/images/little-cat.png" alt="">
+</div>
+
+        <h2>COMING SOON</h2>
+
+        <p class="coming-soon-russian">
+            Этот раздел скоро обретёт свою форму.
+        </p>
+
+        <div class="coming-soon-line"></div>
+
+    </div>
+
+    <div class="coming-soon-bottom">
+    <span>PROJECT LORELEI</span>
+    <span>END OF TRANSMISSION</span>
+</div>
+
+</section>
+
+
+<!-- FAVORITES -->
+<section id="my-library" class="favorites-section" hidden>
+
+    
+    <div class="favorites-header">
+        <span class="favorites-overline">CLAIMED & KEPT</span>
+        <h1>МОИ ФАВОРИТЫ</h1>
+        <p>Твой личный список порочных фантазий.</p>
+    </div>
+
+    <div class="characters-grid" id="favoritesGrid"></div>
+
+</section>
+
+
+<!-- COLLECTION -->
+<section id="compass" class="coming-soon-section" hidden>
+
+    <div class="coming-soon-top">
+        EXPECTATION
+        <span>2026</span>
+    </div>
+
+    <div class="coming-soon-content">
+
+        <div class="coming-soon-overline">
+            SECTION UNDER DEVELOPMENT
+        </div>
+
+        <div class="coming-soon-line"></div>
+
+        <h1>SOMETHING IS TAKING SHAPE.</h1>
+
+        <p class="coming-soon-description">
+            В ДАННЫЙ МОМЕНТ ЭТОТ РАЗДЕЛ НАХОДИТСЯ В РАЗРАБОТКЕ.
+        </p>
+
+        <div class="coming-soon-hourglass">
+            <img src="assets/images/little-cat.png" alt="">
+        </div>
+
+        <h2>COMING SOON</h2>
+
+        <p class="coming-soon-russian">
+            Этот раздел скоро обретёт свою форму.
+        </p>
+
+        <div class="coming-soon-line"></div>
+
+    </div>
+
+    <div class="coming-soon-bottom">
+        <span>PROJECT LORELEI</span>
+        <span>END OF TRANSMISSION</span>
+    </div>
+
+</section>
+
+</section>
+
+    <section class="catalog" id="catalog">
+        <div class="catalog-heading">
+            <p class="section-label">LORELEI AND A.SEL AT YOUR SERVICE</p>
+            <h2>CHARACTER CATALOG</h2>
+            <p>Знакомьтесь с персонажами и их историями.</p>
+        </div>
+
+        <input type="search" id="characterSearch" placeholder="Поиск..." autocomplete="off">
+
+        <button id="toggleFilters" class="filter-toggle" type="button" aria-expanded="false" aria-controls="filtersPanel">
+            <span>ФИЛЬТРЫ</span><span class="filter-plus">＋</span>
+        </button>
+
+        <div class="filters-panel" id="filtersPanel" hidden>
+            <!-- ЖАНРЫ -->
+            <div class="filter-group">
+                <h3>ЖАНР И СЕТТИНГ</h3>
+                <div class="filter-options" id="genreFilters">
+                    <button class="filter-option" type="button" data-value="dark">Дарк</button>
+                    <button class="filter-option" type="button" data-value="romance">Романтика</button>
+                    <button class="filter-option" type="button" data-value="Glass">Стекло</button>
+                    <button class="filter-option" type="button" data-value="modern">Современность</button>
+                    <button class="filter-option" type="button" data-value="isekai">Исекай</button>
+                    <button class="filter-option" type="button" data-value="horror">Хоррор</button>
+                    <button class="filter-option" type="button" data-value="Software">Софт</button>
+                    <button class="filter-option" type="button" data-value="MiddleAges">Средневековье</button>
+                </div>
+            </div>
+
+            <!-- ТРОПЫ И ТЕГИ -->
+            <div class="filter-group">
+                <h3>ТРОПЫ И ТЕГИ</h3>
+                <div class="filter-options" id="tagFilters">
+                    <button class="filter-option" type="button" data-value="мафия">Мафия</button>
+                    <button class="filter-option" type="button" data-value="морально серый мгг">Морально серый МГГ</button>
+                    <button class="filter-option" type="button" data-value="разница в возрасте">Разница в возрасте</button>
+                    <button class="filter-option" type="button" data-value="друзья детства">Друзья детства</button>
+                    <button class="filter-option" type="button" data-value="брак по расчету">Брак по расчёту</button>
+                    <button class="filter-option" type="button" data-value="от ненависти до любви">От ненависти до любви</button>
+                    <button class="filter-option" type="button" data-value="босс">Босс</button>
+                    <button class="filter-option" type="button" data-value="одержимость">Одержимость</button>
+                    <button class="filter-option" type="button" data-value="абьюзивный мгг">Абьюзивный МГГ</button>
+                    <button class="filter-option" type="button" data-value="бдсм">БДСМ</button>
+                    <button class="filter-option" type="button" data-value="отношения">Отношения</button>
+                    <button class="filter-option" type="button" data-value="фиктивный брак">Фиктивный брак</button>
+                    <button class="filter-option" type="button" data-value="киллер">Киллер</button>
+                    <button class="filter-option" type="button" data-value="обман">Обман</button>
+                    <button class="filter-option" type="button" data-value="академия">Академия</button>
+                    <button class="filter-option" type="button" data-value="соулмейты">Соулмейты</button>
+                    <button class="filter-option" type="button" data-value="друг брата">Друг брата</button>
+                    <button class="filter-option" type="button" data-value="друг отца">Друг отца</button>
+                    <button class="filter-option" type="button" data-value="вампир">Вампир</button>
+                    <button class="filter-option" type="button" data-value="любовный треугольник ">Любовный треугольник</button>
+                    <button class="filter-option" type="button" data-value="18+">18+</button>
+                    <button class="filter-option" type="button" data-value="сын/дочь">Сын/Дочь</button>
+                    <button class="filter-option" type="button" data-value="апокалипсис">Апокалипсис</button>
+                    <button class="filter-option" type="button" data-value="запретная любовь">Запретная любовь </button>
+                    <button class="filter-option" type="button" data-value="университет">Университет</button>
+                    <button class="filter-option" type="button" data-value="злодей">Злодей</button>
+                    <button class="filter-option" type="button" data-value="соседи">Соседи</button>
+                    <button class="filter-option" type="button" data-value="враг">Враг</button>
+                    <button class="filter-option" type="button" data-value="ревность">Ревность</button>
+                    <button class="filter-option" type="button" data-value="телохранитель">Телохранитель</button>
+                    <button class="filter-option" type="button" data-value="гендерная интрига">Гендерная интрига</button>
+                    <button class="filter-option" type="button" data-value="под прикрытием">Под прикрытием</button>
+                    <button class="filter-option" type="button" data-value="сводные">Сводные</button>
+                    <button class="filter-option" type="button" data-value="сталкер">Сталкер</button>
+                    <button class="filter-option" type="button" data-value="вынужденный выбор">Вынужденный Выбор</button>
+                    <button class="filter-option" type="button" data-value="встреча через года">Встреча через года</button>
+                    <button class="filter-option" type="button" data-value="предательство">Предательство</button>
+                    <button class="filter-option" type="button" data-value="спортивная драма">Спортивная Драма</button>
+                    <button class="filter-option" type="button" data-value="измена">Измена</button>
+                    <button class="filter-option" type="button" data-value="преследование">Преследование</button>
+                    <button class="filter-option" type="button" data-value="психологический триллер">Психологический триллер</button>
+                    <button class="filter-option" type="button" data-value="амнезия">Амнезия</button>
+                    <button class="filter-option" type="button" data-value="сильная героиня">Сильная героиня</button>
+                    <button class="filter-option" type="button" data-value="уличные танцы">Уличные танцы</button>
+                    <button class="filter-option" type="button" data-value="неразделённая любовь">Неразделённая любовь</button>
+                    <button class="filter-option" type="button" data-value="преданность">Преданность</button>
+                    <button class="filter-option" type="button" data-value="совместная жизнь">Cовместная жизнь</button>
+                    <button class="filter-option" type="button" data-value="сложные отношения">Cложные отношения</button>
+                    <button class="filter-option" type="button" data-value="тайная личность">Тайная личность</button>
+                </div>
+            </div>
+
+            <!-- SPECIAL EDITION (ПРАЗДНИКИ) -->
+            <div class="filter-group">
+                <h3>SPECIAL EDITION</h3>
+                <div class="filter-options" id="specialFilters">
+                    <button class="filter-option" type="button" data-value="хэллоуин">Хэллоуин</button>
+                    <button class="filter-option" type="button" data-value="новый год">Новый год</button>
+                    <button class="filter-option" type="button" data-value="день святого валентина">День святого Валентина</button>
+                </div>
+            </div>
+
+            <!-- ПЛАТФОРМЫ -->
+            <div class="filter-group">
+                <h3>ПЛАТФОРМА</h3>
+                <div class="filter-options" id="platformFilters">
+                    <button class="filter-option" type="button" data-value="character.ai">Character.ai</button>
+                    <button class="filter-option" type="button" data-value="chai">Chai</button>
+                    <button class="filter-option" type="button" data-value="seasoul">Seasoul</button>
+                    <button class="filter-option" type="button" data-value="hi waifu">Hi Waifu</button>
+                    <button class="filter-option" type="button" data-value="janitor ai">Janitor AI</button>
+                    <button class="filter-option" data-value="dokichat">Dokichat</button>
+                    <button class="filter-option" data-value="talaforge">TalaForge</button>
+                    <button class="filter-option" data-value="emochi">Emochi</button>
+                    <button class="filter-option" type="button" data-value="dispik prompt">Dispik Prompt</button>
+                </div>
+            </div>
+
+            <!-- ПОРЯДОК -->
+            <div class="filter-group">
+                <h3>ПОРЯДОК</h3>
+                <div class="filter-options" id="orderFilters">
+                    <button class="filter-option active" type="button" data-value="new">Сначала новые</button>
+                    <button class="filter-option" type="button" data-value="old">Сначала старые</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-tools">
+            <button id="resetFilters" class="reset-button" type="button">СБРОСИТЬ ФИЛЬТРЫ</button>
+            <p id="resultsCount" class="results-count" aria-live="polite"></p>
+        </div>
+
+        
+        <div class="characters-grid" id="charactersGrid">
+            <!-- 1. ДАМИАНО ФЕРРО -->
+            <article class="character-card"
+                data-name="Дамиано Ферро"
+                data-genres="dark modern"
+                data-tags="мафия морально серый мгг"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-08-07"
+                data-series="blood-legacy">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Дамиано Ферро">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/damiano-ferro.jpg" alt="Дамиано Ферро" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">DF</span>
+
+                        
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">BLOOD LEGACY</span>
+                        <span class="character-name">Дамиано Ферро</span>
+                        <span class="character-card-tags">ДАРК · МАФИЯ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>В неоновом сердце порочного Лас-Вегаса девушка, выросшая среди долгов, доз и чужих ошибок, пытается вырваться из прошлого и начать всё сначала. Она ищет простую работу, чтобы накопить на колледж, и по объявлению приходит в клуб «Sapphire», даже не подозревая, куда именно попала. Мокрая от дождя, потерянная и слишком наивная для этого города, она оказывается под пристальным взглядом человека, чьё имя здесь произносят шётом. И когда она наконец понимает, что оказалась не там, где должна, уже слишком поздно — некоторые двери закрываются навсегда, едва успев открыться. </p>
+                    <div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>СЕРИЯ: BLOOD LEGACY</span>
+        <span>ТЕГИ: МАФИЯ, МОРАЛЬНО СЕРЫЙ МГГ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 19 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 3 МАРТА</span>
+        <span>СТАТУС: БРАТ ДОНА ФЕРРО И УПРАВЛЯЮЩИЙ ГРЯЗНЫМИ ДЕЛАМИ</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND DAMIANO FERRO ON</p>
+                        <div class="platforms-grid">
+                            
+                            <a href="https://share.character.ai/Wv9R/5pjmvo5u" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_b1ee1dbe-d54f-43b4-a339-94a4fcb07aac" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=d9rgcqte878c7387ibeg" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/ru/robot/22325037" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/db81e820-3c31-4b2a-9da8-c0b5454ee17c_character-damiano-ferro-mafia" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Damiano-Ferro-08-04" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        
+                        <a href="https://www.dokichat.club/ru/role/019fe106-bbc1-71cc-9bcf-8b83dc376a4b?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_MnZxKkK74LwBCv6g" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Mafiya-07-30-8" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/86" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            
+            </article>
+
+            <!-- 2. МАТТЕО ФЕРРО -->
+            <article class="character-card"
+                data-name="Маттео Ферро"
+                data-genres="dark modern"
+                data-tags="мафия морально серый мгг разница в возрасте"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-08-21"
+                data-series="blood-legacy">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Маттео Ферро">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/matteo-ferro.jpg" alt="Маттео Ферро" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">MF</span>
+                      
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">BLOOD LEGACY</span>
+                        <span class="character-name">Маттео Ферро</span>
+                        <span class="character-card-tags">ДАРК · МАФИЯ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Лас-Вегас — город, где всё имеет цену, кроме человеческой жизни, которая здесь стоит дешевле патрона. Её кровь теперь принадлежит ему — Маттео Ферро, Дону, чья душа выжжена дотла улицами и предательством. Она должна была стать лишь инструментом давления на её отца и братьев. Но инструмент оказался с зубами. Буквально. Теперь он стоит над ней, размазывая собственную кровь по её губам, и в голосе его звучит не просто угроза —  обещание боли. Он ещё не решил, убьёт ли её быстро или будет ломать долго. Но одно он уже знает наверняка: эта девчонка пожалеет, что осмелилась ему дерзить.</p>
+                    <div class="modal-meta">
+                        <div class="meta-column meta-left">
+                            <span>ЖАНР: ДАРК</span>
+                            <span>АВТОР: A.SEL</span>
+                            <span>СЕРИЯ: BLOOD LEGACY</span>
+                            <span>ТЕГИ: МАФИЯ, МОРАЛЬНО СЕРЫЙ МГГ, РАЗНИЦА В ВОЗРАСТЕ</span>
+                        </div>
+                        <div class="meta-column meta-right">
+                            <span>ВОЗРАСТ: 32 ГОДА</span>
+                            <span>ДЕНЬ РОЖДЕНИЯ: 14 НОЯБРЯ</span>
+                            <span>СТАТУС: ДОН ЛАС-ВЕГАСА</span>
+                        </div>
+                    </div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND MATTEO FERRO ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/gscgwj4k" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_c3f9f17d-1d80-4d6d-aec4-dd113dffa9ba" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=da46f5de878c73djk7l0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/ru/robot/22904130" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/d2ab3c97-acb4-4be4-b152-45ac16c1566d_character-matteo-ferro-mafia" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Matteo-Ferro-08-20" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                       
+                        <a href="https://www.dokichat.club/ru/role/01a024e1-6441-7f3a-98ef-01cd3908f8d6?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_8z74q4m-6SaT3erf" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Nasledie-boli-08-20" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/89" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. АЛЕСИО ФЕРРО -->
+            <article class="character-card"
+                data-name="Алесио Ферро"
+                data-genres="dark modern"
+                data-tags="мафия морально серый мгг друзья детства"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-08-25"
+                data-series="blood-legacy">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Алесио Ферро">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Alessio-Ferro.jpg" alt="Алесио Ферро" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">AF</span>
+                        
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">BLOOD LEGACY</span>
+                        <span class="character-name">Алесио Ферро</span>
+                        <span class="character-card-tags">ДАРК · МАФИЯ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Однажды, в длинном коридоре особняка, двенадцатилетняя девочка в наушниках упала ему в руки. Он поймал. Она покраснела. С тех пор прошло шесть лет, и Алесио понял одну простую вещь: он не помнит ни одной женщины, кроме неё. Не помнит их лиц, имён, стонов. Помнит только её — дерзкую, веселую и с секретом, который пахнет предательством. Она выходит замуж. За другого.</p>
+                    
+                    <!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/Restore_and_enhance_image_2K_202608251619.jpeg" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/Man_and_woman_sitting_together_202608251625.jpeg" alt="Сцена 2" loading="lazy">
+               
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/Man_and_woman_sitting_bathroom_202608251623.jpeg" alt="Сцена 3" loading="lazy">
+               
+            </figure>
+        </div>
+    </div>
+                    
+                    <div class="modal-meta">
+                        <div class="meta-column meta-left">
+                            <span>ЖАНР: ДАРК</span>
+                            <span>АВТОР: A.SEL</span>
+                            <span>СЕРИЯ: BLOOD LEGACY</span>
+                            <span>ТЕГИ: МАФИЯ, МОРАЛЬНО СЕРЫЙ МГГ, РАЗНИЦА В ВОЗРАСТЕ</span>
+                        </div>
+                        <div class="meta-column meta-right">
+                            <span>ВОЗРАСТ: 19 ЛЕТА</span>
+                            <span>ДЕНЬ РОЖДЕНИЯ: 3 МАРТА</span>
+                            <span>СТАТУС: МЛАДШИЙ БРАТ ДОНА, ПРАВАЯ РУКА СТАРШИХ БРАТЬЕВ </span>
+                        </div>
+                    </div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND ALESIO FERRO ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/v698ldbw" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_295f35c6-4318-4159-8fb5-45aee48e3b4b" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=da6q4e5e878c73evdt50" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/ru/robot/23078839" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/e229633d-e275-450a-a736-335ece709687_character-alesio-ferro-mafia" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Alesio-Ferro-08-25" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                       
+                        <a href="https://www.dokichat.club/ru/role/01a03944-b3c7-73b0-9d35-73b1b09ac09e?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_0igZ0dtt1-H9r74B" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                        </div>
+
+                         <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Plot-i-krov-08-24" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/92" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+<article class="character-card"
+                data-name="Лисандр Уэйнрайт"
+                data-genres="romance modern"
+                data-tags="от ненависти до любви разница в возрасте босс"
+                data-platforms="character.ai chai seasoul hi waifu dokichat talaforge dispik prompt"
+                data-date="2026-06-15">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Лисандр Уэйнрайт">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Lysander-Wainwright.jpg" alt="Лисандр Уэйнрайт" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">lW</span>
+                        
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Лисандр Уэйнрайт</span>
+                        <span class="character-card-tags">ПОВСЕДНЕВНОСТЬ · БОСС</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Работница, не выдержав условия труда, резко уходит с работы и решает сбежать к морю. Вместе с подругой она наслаждается свободой и морскими прогулками, пока случайно не попадает на виллу бывшего босса — Лисандра Уэйнрайта, которого она недавно оскорбила. Теперь их пути снова пересеклись, и она должна найти силы справиться с последствиями.</p>
+                    <div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: СОВРЕМЕННОСТЬ</span>
+        <span>АВТОР: LORELEI</span>
+        <span>ТЕГИ: ОТ НЕНАВИСТИ ДО ЛЮБВИ, РАЗНИЦА В ВОЗРАСТЕ, БОСС</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 29 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 27 ОКТЯБРЯ</span>
+        <span>СТАТУС: ВЛАДЕЛЕЦ КРУПНОГО БИЗНЕСА</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND LYSANDRE WAINWRIGHT ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/9ywkaxv4" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_f4b5074a-90b4-48f6-8c7b-ffaccc8bdb44" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=d8o1svte878c73ft169g" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://beta.hiwaifu.com/robot/robotdetails?robots_id=20002156">HI WAIFU</a>
+                            <a href="https://www.dokichat.club/chat/044a9b63-53e1-4096-b67d-3f1b5e246f14?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_KDgRysP2wsyIGxFz" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                            <a href="https://telegra.ph/Promt-Lysander-Wainwright-06-16" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                            
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Vkus-solyonogo-vetra-06-15" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/24" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="character-card"
+                data-name="Картер Роудз "
+                data-genres="dark modern"
+                data-tags="абьюзивный мгг одержимость морально серый мгг"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat dispik prompt"
+                data-date="2026-06-15">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Картер Роудз ">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Carter-Rhodes.jpg" alt="Картер Роудз" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">KR</span>
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Картер Роудз</span>
+                        <span class="character-card-tags">ДАРК · ОДЕРЖИМОСТЬ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Психолог, довольная своей спокойной работой в маленькой клинике, неожиданно получает перевод в колонию строгого режима — работать с пожизненно заключёнными. Первое время ей страшно, но постепенно она привыкает и даже находит общий язык с осуждёнными. Её главным пациентом становится Картер Роудз — харизматичный лидер тюремной иерархии, осуждённый за тройное убийство.
+Между ними возникает странная близость: мягкие слова, прикосновения, необъяснимая привязанность. Девушка помогает Картеру выйти на свободу, и вскоре он поселяется в доме напротив. Он становится заботливым соседом, и она почти забывает о его прошлом.
+Но однажды, придя к нему в гости, она обнаруживает, что его комната полностью копирует её собственную. Картер признаётся в одержимости, и милый сосед превращается в агрессивного манипулятора. Он зажимает её в углу и требует признать, что она принадлежит ему. Девушка оказывается в ловушке, из которой нет выхода.</p>
+                    <div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: LORELEI</span>
+        <span>ТЕГИ: ОДЕРЖИМОСТЬ, АБЬЮЗИВНЫЙ МГГ, МОРАЛЬНО СЕРЫЙ МГГ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 26 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 6 АВГУСТА</span>
+        <span>СТАТУС: В ПРОШЛОМ РАБОТАЛ В СФЕРЕ АЙТИ</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND CARTER ROSE ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/8i8q94zc" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_9e1d458d-ea90-414d-a6ea-2d638439b31f"_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=d8sql55e878c73f9hdu0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://beta.hiwaifu.com/robot/robotdetails?robots_id=20256992">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/33066a63-0ee6-4b64-84d3-1b2dcaed8895_character-carter-rhodes"_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://www.dokichat.club/chat/c035cc1b-2ac8-4145-8cdb-38149ca231a7?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                            <a href="https://telegra.ph/Promt-Carter-Rhodes-06-21"_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Povodyr-06-22" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/36" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+             <!-- 1. Марчелло Дэ Лука -->
+            <article class="character-card"
+                data-name="Марчелло Дэ Лука"
+                data-genres="dark modern"
+                data-tags="мафия морально серый мгг абьюзивный мгг"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat dispik prompt"
+                data-date="2026-06-25">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Марчелло Дэ Лука">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Marcello-De-Luca.jpg" alt="Марчелло Дэ Лука" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">MDL</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Марчелло Дэ Лукао</span>
+                        <span class="character-card-tags">ДАРК · МАФИЯ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Иногда один неверный шаг, один поворот, одна секунда задержки меняют всё. Для неё таким шагом стал обычный вечер в Риме, который превратился в кошмар наяву. Она видела, как умирают люди. Она чувствовала, как страх парализует тело, не давая сделать вдох. Она была готова к тому, что её жизнь оборвётся прямо здесь, на горячем асфальте. Но судьба распорядилась иначе, подкинув ей жестокий сюрприз в виде спасения от самого опасного человека города. Марчелло Де Лука не спасает просто так. Он не рискует ради незнакомцев. Он действует только тогда, когда видит выгоду. И теперь эта хрупкая девушка стала его выгодой. Она нужна ему как свидетель, как голос, который скажет именно то, что он прикажет. И она не может отказаться. Её заперли в красивую комнату, приковали к кровати и ждут. Чего ждут? Когда наступит момент, чтобы использовать её. Когда она произнесёт свои показания перед теми, кто должен их услышать. И что случится с ней после того, как она скажет всё. Ответа на этот вопрос нет. Но в глазах Де Луки читается одно — она больше не хозяйка своей судьбы.</p>
+                    <div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: LORELEI</span>
+        <span>ТЕГИ: МАФИЯ, МОРАЛЬНО СЕРЫЙ МГГ, АБЬЮЗИВНЫ МГГ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 29 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 25 ДЕКАБРЯ</span>
+        <span>СТАТУС: БОСС "СЕМЬИ", КРИМИНАЛЬНЫЙ АВТОРИТЕТ</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND MARCELLO DE LUCA ON</p>
+                        <div class="platforms-grid">
+                             <a href="https://share.character.ai/Wv9R/5p3zfyw7" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_de98c88e-ce58-40cb-ab17-daac1f11c395" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=d901v45e878c73db6gp0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://beta.hiwaifu.com/robot/robotdetails?robots_id=20458038" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/profiles/cee0815d-a819-42c0-9388-cff797340fdb_profile-of-project-lorelei" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/Promt-Marcello-De-Luca-06-27" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                            <a href="https://www.dokichat.club/chat/9aa6d41b-da9f-4694-a1aa-28013bd2d715?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/V-rukah-u-dyavola-06-24" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/40" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="character-card"
+                data-name="Эйден Уорд"
+                data-genres="dark modern"
+                data-tags="одержимость морально серый мгг"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-08-04">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Эйден Уорд">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Aiden-Ward.jpg" alt="Марчелло Дэ Лука" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">AW</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Эйден Уорд</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Одна сломанная палочка и отчаянное желание быть любимой превратили тихую тоску в удушающую одержимость. Вежливое безразличие Эйдена сменилось всепоглощающей страстью, которая не знает границ, жалости и права на отказ. Магия сработала слишком точно: теперь он любит её сильнее всех на свете.</p>
+                    <div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ОДЕРЖИМОСТЬ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 22 ГОДА</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 14 МАРТА</span>
+        <span>СТАТУС: РАБОТАЕТ В МАЛЕНЬКОМ МАГАЗИНЧИКЕ ОТЦА ГЕРОИНИ</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND AIDEN WARD ON</p>
+                        <div class="platforms-grid">
+                             <a href="https://share.character.ai/Wv9R/ruduiqwg" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_6cf12af1-15ca-4c13-9cbf-8afd636d0174" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=d9p46d5e878c73dc5p60" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/ru/robot/22163930" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/7edeeaa6-9009-485f-9727-b474c004f495_character-aiden-ward" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-EHjden-Uord-08-05" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                       
+                           <a href="https://www.dokichat.club/ru/role/019fce51-1ace-78b1-93a6-70a37612879c?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_ifA2z3FXpJR7LxDZ" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Obsession-08-04-24" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/84" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="character-card"
+                data-name="Дэмиан Рамирес"
+                data-genres="romance modern"
+                data-tags="фиктивный брак"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-08-29"
+                data-series="four-levels-of-crap">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Дэмиан Рамирес">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Damian-Ramirez.jpg" alt="Дэмиан Рамирес" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">DR</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">FOUR LEVELS OF CRAP</span>
+                        <span class="character-name">Дэмиан Рамирес</span>
+                        <span class="character-card-tags">РОМАНТИКА · СОВРЕМЕННОСТЬ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Дэмиан Рамирес никогда не верил в любовь — только в выгодные сделки и идеально выверенные шаги. Когда давление семьи становится невыносимым, он находит идеальную партнёршу для фиктивного брака: такую же уставшую от светских игр. Их договор прост: год совместных фото на мероприятиях, ни слова о настоящей жизни и развод по расписанию. Но даже самый безупречный контракт уязвим перед человеческим фактором. И пока они играют свои роли с пугающей убедительностью, остается лишь один вопрос: хватит ли им цинизма, чтобы не перепутать сделку с чем-то большим?</p>
+                    
+ <!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/Two_men_attending_luxury_gala_202608291734.jpeg" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+        </div>
+    </div>
+
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: РОМАНТИКА</span>
+        <span>АВТОР: A.SEL</span>
+        <span>СЕРИЯ: FOUR LEVELS OF CRAP</span>
+        <span>ТЕГИ: ФИКТИВНЫЙ БРАК</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 27 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 14 МАРТА</span>
+        <span>СТАТУС: ВТОРОЙ НАСЛЕДНИК КОМПАНИИ Ramírez Holding.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND DAMIAN RAMIREZ ON</p>
+                        <div class="platforms-grid">
+                             <a href="https://share.character.ai/Wv9R/ok8ayb27" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_6f1cbd1d-1bfe-4784-877b-250892f0ed24" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=da9r0e5e878c73fel0gg" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/ru/robot/23248747" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/3dab6cc7-852d-4690-a97b-97cf6857281c_character-damian-ramirez-fictitious-marriage" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-08-29" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                      
+                      <a href="https://www.dokichat.club/ru/role/01a05100-6f7c-7253-ade1-a311ad0e2009?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_buTiZ9TaUkOKySFh" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                        </div>
+
+                         <div class="character-action-buttons">
+                            <a href="https://telegra.ph/predstav-02-07" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/94" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="character-card"
+                data-name="Джейд Кембридж"
+                data-genres="dark modern"
+                data-tags="морально серый мгг абьюзивный мгг киллер обман"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-09-07">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Джейд Кембридж">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Jade-Cambridge.jpg" alt="Джейд Кембридж" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">JC</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Джейд Кембридж</span>
+                        <span class="character-card-tags">ДАРК · ОБМАН</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Юная шериф переезжает из мегаполиса в туманный северный городок для расследования исчезновений туристов. Её напарник, разговорчивый молодой человек по имени Джейд, оказывается её главным союзником. Однако, когда героиня пытается обратиться за подкреплением, Джейд демонстрирует свою истинную сущность: он прижимает её к себе и признаётся, что местные жители и он сам образуют «большую семью», которая не допускает постороннего вмешательства в свои дела.</p>
+ 
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: LORELEI</span>
+        <span>ТЕГИ: КИЛЛЕР, АБЬЮЗИВНЫЙ МГГ, ОБМАН, МОРАЛЬНО СЕРЫЙ МГГ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 25 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 7 НОЯБРЯ</span>
+        <span>СТАТУС: ПОЛИЦЕЙСКИЙ ОФИЦЕР</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND JADE CAMBRIDGE ON</p>
+                        <div class="platforms-grid">
+                             <a href="https://share.character.ai/Wv9R/x86kz71m" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_4dcf8dae-45b3-4f90-bc9a-cb925099842a" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=dag745le878c73btv4a0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/share/23782704" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/30c24308-bd8e-4d32-9bdf-c1a187804b9c" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/Promt-09-12-2" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        
+                        <a href="https://www.dokichat.club/ru/role/01a09731-9653-7541-b6db-25e83346aded?isShare=true" target="_blank" rel="noopener noreferrer">DOKICHAT</a>
+                             <a href="https://t.me/talaforge_bot?start=charlink_vKWtlhU8EkrKFOYe" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Tuman-rastvorivshijsya-v-arhivah-09-07" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/97" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="character-card"
+                data-name="Джетт Хэммонд"
+                data-genres="dark modern"
+                data-tags="морально серый мгг под прикрытием"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dokichat talaforge dispik prompt"
+                data-date="2026-09-13">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Джетт Хэммонд">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Jett-Hammond.png" alt="Джейд Кембридж" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">JC</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Джетт Хэммонд</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>В прогнившем до костей Блэкхейвене, где закон давно сгнил, а кровь и похоть текут по одним переулкам, молодая офицер полиции берёт опасное задание под прикрытием — втереться в доверие к психопату Джетту Хэммонду. Между взрывами, ограблениями и бессонными ночами, пропахшими порохом, она всё глубже тонет в его безумии, пока граница между охотником и добычей не начинает стираться. Здесь каждый выстрел и каждое прикосновение могут стать последним.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ПОЛИЦЕЙСКИЙ ПОД ПРИКРЫТИЕМ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 28 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 14 НОЯБРЯ</span>
+        <span>СТАТУС: ПСИХ, РАЗЫСКИВАЕМЫЙ И ОПАСНЫЙ ПРЕСТУПНИК.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND JETT HAMMOND ON</p>
+                        <div class="platforms-grid">
+                             <a href="https://share.character.ai/Wv9R/xwgmyk19" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_f9491107-2cef-483b-8f57-a179b8066931" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=dajcd7te878c73cp76m0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/23848900" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/4ae9e2da-3bd5-4b21-af88-db04b0f15fa6_character-jett-hammond-sin-city" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://t.me/talaforge_bot?start=charlink_dJpQFV0_RR2W7p95" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Dzhett-Hehmmond-09-13" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Padshie-09-13" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/105" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="character-card"
+                data-name="Джереми Армстронг"
+                data-genres="dark modern"
+                data-tags="морально серый мгг сводные"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai talaforge emochi dispik prompt"
+                data-date="2026-09-15"
+                data-series="vicious-heirs">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Джереми Армстронг">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Jeremy-Armstrong.png" alt="Джейд Кембридж" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">JA</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">VICIOUS HEIRS</span>
+                        <span class="character-name">Джереми Армстронг</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>В мире «старых денег» и безжалостных правил Джереми Армстронг привык получать всё, что захочет. Ты верила, что он просто ненавидит тебя, но под его хладнокровием скрывался совсем иной расчет, в котором тебе была отведена особая роль. Жестокий поцелуй, застывший на губах привкус крови и сорванная вечеринка — это лишь начало. И когда на пороге появляется мать, Джереми не пугается. Он делает шаг вперед, окончательно превращая твою жизнь в красивый, порочный ад.</p>
+
+                    <!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/к1.png" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/к2.png" alt="Сцена 2" loading="lazy">
+               
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/К3.png" alt="Сцена 3" loading="lazy">
+               
+            </figure>
+        </div>
+    </div>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>СЕРИЯ: VICIOUS HEIRS</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, СВОДНЫЙ БРАТ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 19 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 31 ОКТЯБРЯ</span>
+        <span>СТАТУС: СВОДНЫЙ БРАТ ГЕРОИНИ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND JEREMY ARMSTRONG ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/1hzo86as" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_2a140b79-f97b-454a-9385-638071f6294e" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=dakju8de878c73cm1op0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/23891151" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/8fd9e1a9-0830-495c-a07a-06a6e4c27631_character-jeremy-armstrong-stepbrother-spoiled-paradise" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://t.me/talaforge_bot?start=charlink_ahaHWHpf30Qwkf0Z" target="_blank" rel="noopener noreferrer">TALAFORGE</a>
+                            <a href="https://emochi.com/prompt/prompt-share/@-db6ff0d7?utm_source=internal&utm_medium=share&utm_campaign=bot" target="_blank" rel="noopener noreferrer">EMOCHI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Dzheremi-Armstrong-09-15" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Vicious-Heirs-Isporchennyj-raj-09-14" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/110" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="character-card"
+                data-name="Джейсон Рурк"
+                data-genres="dark modern"
+                data-tags="морально серый мгг академия"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai emochi dispik prompt"
+                data-date="2026-09-17">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Джейсон Рурк">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Jason-Rourke.png" alt="Джейсон Рурк" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">JR</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Джейсон Рурк</span>
+                        <span class="character-card-tags">ДАРК · АКАДЕМИЯ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>В мире элитной академии, где кровь и власть правят, Джейсон Рурк — самый жестокий боец четвёрки. Он знает только боль, ярость и насилие. До тех пор, пока не встречает её — тихую, хрупкую и невероятно добрую девушку, которая смотрит на него не как на урода, а как на человека. С каждым её мягким прикосновением и заботливым взглядом в нём просыпается нечто опасное. Он хочет защитить её… и одновременно хочет разрушить. Хочет слышать, как она плачет, произнося его имя, пока он берёт её грубо и безжалостно. Два месяца он держит зверя в клетке. Пока однажды не наступает момент, когда клетка ломается.</p>
+
+                    <!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/cinematic_dark_thriller_photography,_gritty_202606021852.jpeg" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/Man_standing_in_boxing_ring_2K_20260919181547.jpeg" alt="Сцена 2" loading="lazy">
+               
+            </figure>
+
+<figure class="gallery-item">
+                <img src="assets/images/джейсон.png" alt="Сцена 3" loading="lazy">
+               
+            </figure>
+        </div>
+    </div>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, АКАДЕМИЯ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 20 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 14 НОЯБРЯ</span>
+        <span>СТАТУС: СТУДЕНТ ЭЛИТНОЙ АКАДЕМИИ. УЧАСТНИК ПОДПОЛЬНЫХ БОЁВ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND JASON ROURKE ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/jxip01do" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_96b463a1-c064-4969-aeb5-73361e5d9bde" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=damne15e878c73d9iv60" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/24012132" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/447b2c00-b91d-4e95-b79e-6446b99f1938_character-jason-rourke-the-wreckage" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://emochi.com/prompt/prompt-share/@jason-rourke-50848554?utm_source=internal&utm_medium=share&utm_campaign=bot" target="_blank" rel="noopener noreferrer">EMOCHI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Dzhejson-Rurk-09-20" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Urod-06-06-2" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/145" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Итан Венс"
+                data-genres="dark modern"
+                data-tags="морально серый мгг абьюзивный мгг сталкер"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dispik prompt"
+                data-date="2026-09-23">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Итан Венс">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Ethan-Vance.jpg" alt="Итан Венс" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">EV</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Итан Венс</span>
+                        <span class="character-card-tags">ДАРК · СТАЛКЕР</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>{{user}} мечтала о страсти и одержимости из дарк-романов, но не подозревала, что найдет их в реальности.Сначала — странные сообщения. Потом — тотальный контроль. Когда девушка решила, что может игнорировать преследователя, он доказал обратное, покалечив её друга.Теперь у неё нет выбора. Он забирает её, чтобы научить уму-разуму. Ведь если заказываешь сказку о маньяке, будь добра дочитать до конца.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: LORELEI</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, СТАЛКЕР, АБЬЮЗИВНЫЙ МГГ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 29 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 13 ОКТЯБРЯ</span>
+        <span>СТАТУС: ОФИЦИАЛЬНО — ЧАСТНЫЙ ОХРАННИК/СПЕЦИАЛИСТ ПО БЕЗОПАСНОСТИ. НЕОФИЦИАЛЬНО — БЫВШИЙ ВОЕННЫЙ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND ETHAN VANCE ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/iy1ywvhn" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_6b9fa0ae-c2d9-48ad-8439-f6070cfd87ed" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=das4785e878c73dc7ueg" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/share/24330619" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/a5a20fb8-ca7f-4de8-8169-b8a722575b6e" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/Promt-Ethan-Vance-10-03" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Bojsya-svoih-zhelanij-09-23-2" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/165" target="_blank" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Фабиано Альварес"
+                data-genres="dark modern"
+                data-tags="морально серый мгг вынужденный выбор"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dispik prompt"
+                data-date="2026-10-04">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Фабиано Альварес">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Fabiano-Alvarez.jpg" alt="Фабиано Альварес" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">EV</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Фабиано Альварес</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Разрушенный бизнес отца, фальшивый фасад семьи и старый грех, который ты надеялась похоронить навсегда, сливаются в одну смертоносную ловушку, когда на пороге вашего дома появляется Фабиано Альварес. Чтобы спасти сестру, ты переступаешь через себя и становишься его живым залогом, ещё не догадываясь, что этот ультиматум — не случайность, а давно расставленная ловушка. Полгода назад ты отдала ему одну ночь и совершила ошибку, попытавшись исчезнуть. Теперь ты — его живая гарантия, его личное имущество, запертое в пространстве его безграничной власти.</p>
+
+                           <!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/Напряжённый ужин при свечах.png" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/Напряжённый ужин при свечах (1).png" alt="Сцена 2" loading="lazy">
+               
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/0099.png" alt="Сцена 3" loading="lazy">
+               
+            </figure>
+        </div>
+    </div>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ВЫНУЖДЕННЫЙ ВЫБОР</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 27 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 28 ОКТЯБРЯ</span>
+        <span>СТАТУС: ГЛАВА ФИНАНСОВОГО КОНГЛОМЕРАТА ALVAREZ GLOBAL. ТАК ЖЕ ПРАВИТЕЛЬ ТЕМНОГО БИЗНЕСА И ГРЯЗНЫХ ДЕНЕГ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND FABIANO ALVAREZ ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/waw2hmw3" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_833adb4e-d587-42d8-ae66-832c7e3f927e" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=db1m0bte878c739satbg" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/24660175" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/99c1725a-6572-46ef-9654-ef974d28f310_character-fabiano-alvarez" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Fabiano-Alvare-10-03" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Temnyj-zalog-10-02" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/175" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Джером Бейкер"
+                data-genres="Glass modern"
+                data-tags="морально серый мгг встреча через года предательство спортивная драма"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai emochi dispik prompt"
+                data-date="2026-10-11">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Джером Бейкер">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Jerome-Baker.png" alt="Джером Бейкер" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">EV</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Джером Бейкер</span>
+                        <span class="character-card-tags">СТЕКЛО</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Когда-то ты сбегала к нему из своего золотого замка в сырой подвал, но за твою любовь пришлось заплатить слишком высокую цену. Тебя силой вырвали из его жизни, а Джерому оставили лишь ядовитую ложь, из-за которой он потерял всё, включая решающий бой на ринге. Спустя пять лет вы встречаетесь снова: на закрытом вечере для элиты, где он уже не нищий боец из подвала, а чемпион с обложек глянца. Джером смотрит на тебя с ядовитой усмешкой и не верит ни единому слову. Есть ли смысл объяснять правду, если в его глазах ты осталась лишь богатой сучкой, раздавившей его сердце?</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: СТЕКЛО, ПРЕДАТЕЛЬСТВО</span>
+        <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, СПОРТИВНАЯ ДРАМА, ВСТРЕЧА ЧЕРЕЗ ГОДА, ПРЕДАТЕЛЬСТВО</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 28 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 3 МАРТА</span>
+        <span>СТАТУС: ДЕЙСТВУЮЩИЙ ЧЕМПИОН UFC В ПОЛУТЯЖЁЛОМ ВЕСЕ. ЛИЦО КРУПНЫХ СПОНСОРСКИХ КОНТРАКТОВ, ОБЛОЖЕК СПОРТИВНЫХ ЖУРНАЛОВ И БЛАГОТВОРИТЕЛЬНЫХ КАМПАНИЙ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND JEROME BAKER ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/5ncduvu7" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_6ca7d343-0a8f-4a87-b59e-44f923154966" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=db5ml9le878c73cvbb90" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/24890205" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/130fcd72-e711-4512-ac77-c5d4f402e803_character-jerome-baker-a-meeting-after-five-years-of-betrayal" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://emochi.com/prompt/prompt-share/@jerome-baker-1b8497f1?utm_source=internal&utm_medium=share&utm_campaign=bot" target="_blank" rel="noopener noreferrer">EMOCHI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Dzherom-Bejker-10-11" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/SHram-10-10" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/210" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Ксавьер Дэймон Хейз"
+                data-genres="dark modern"
+                data-tags="морально серый мгг измена разница в возрасте брак по расчету друг отца"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dispik prompt"
+                data-date="2026-10-21">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Ксавьер Дэймон Хейз">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Xavier-Damon-Hayes.jpg" alt="Ксавьер Дэймон Хейз" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">EV</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Ксавьер Дэймон Хейз</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Дочь влиятельного бизнесмена {{user}}, покорившаяся давлению отца, готовится к браку по расчету с Николасом, сыном друга отца, Ксавьера Хейза. В день свадьбы, будучи в муках от пышного платья, героиня случайно застаёт жениха в интимной сцене с любовницей и, испытывая отвращение, бросается жаловаться отцу. Услышав её рассказ, Ксавьер предлагает шокирующую альтернативу: если невеста не способна выйти замуж за сына, он готов лично вступить в брак с ней вместо Николаса.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: LORELEI</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, РАЗНИЦА В ВОЗРАСТЕ, ИЗМЕНА, ДРУГ ОТЦА</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 46 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 12 НОЯБРЯ</span>
+        <span>СТАТУС: ЖЕНИХ ГЕРОИНИ. ЗАНЯЛ МЕСТО СОБСТВЕННОГО СЫНА В ДЕНЬ СВАДЬБЫ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND XAVIER DAMON HAYES ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/zz1sapej" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_33c29311-587c-49e6-9e56-55f756bac633" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=dbdpimle878c73b35ju0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/share/25358033" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/e11c049e-8f20-4a19-aa0a-5f7213f36705" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Xavier-Damon-Hayes-10-26" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Izvrashchennaya-dogovorennost-10-21" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/228" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Килиан Давенпорт"
+                data-genres="dark modern"
+                data-tags="морально серый мгг хэллоуин преследование"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dispik prompt"
+                data-date="2026-10-27"
+                data-series="halloween-2026">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Килиан Давенпорт">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Kilian-Davenport.jpg" alt="Килиан Давенпорт" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">EV</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">HALLOWEEN 2026</span>
+                        <span class="character-name">Килиан Давенпорт</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>В ночь, когда чудовища выходят из тени, трудно понять, кто из них настоящий. Ты всего лишь хотела ненадолго забыть о разбитом сердце, но лес за поместьем Блэквуд-лейн приготовил тебе встречу, после которой прежняя боль покажется детской забавой, ведь теперь единственным твоим желанием станет просто дожить до утра.</p>
+
+<!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/Ангел и маска в лунном лесу.png" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/Ангел в лунном лесу и маскарадный убийца.png" alt="Сцена 2" loading="lazy">
+               
+            </figure>
+        </div>
+    </div>
+
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>СЕРИЯ: HALLOWEEN 2026</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ПРЕСЛЕДОВАНИЕ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 23 ГОДА</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 31 ОКТЯБРЯ</span>
+        <span>СТАТУС: МОЛОДОЙ НАСЛЕДНИК, ПРЕДСТАВИТЕЛЬ ЗОЛОТОЙ МОЛОДЁЖИ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND KILIAN DAVENPORT ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/qe7h7exh" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_d649c477-b3a1-4bfc-9966-39ea52646de3" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=dbh324te878c73fhilqg" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/25567400" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/0a2ed44b-c124-4196-99d2-233269bfcc47_character-kilian-davenport-halloween" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Kilian-Davenport-10-27" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Sladkij-vkus-straha-10-27" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/228" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Ренделл Эшворт"
+                data-genres="dark modern"
+                data-tags="морально серый мгг хэллоуин преследование"
+                data-platforms="character.ai chai seasoul hi waifu janitor ai dispik prompt"
+                data-date="2026-10-31"
+                data-series="halloween-2026">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Ренделл Эшворт">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Rendell-Ashworth.jpg" alt="Ренделл Эшворт" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">RA</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">HALLOWEEN 2026</span>
+                        <span class="character-name">Ренделл Эшворт</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>В эту ночь маски носят все, но некоторые скрывают за ними куда больше. Ты приезжаешь с подругами на хэллоуинскую вечеринку, рассчитывая провести ночь в компании музыки, выпивки и десятков незнакомцев. Однако случайная встреча с мужчиной в маске черепа меняет всё. Его намерения остаются загадкой, а поведение вызывает слишком много вопросов. Он не спешит объясняться и, кажется, совершенно не заинтересован в том, чтобы ты понимала происходящее.</p>
+
+<!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/Мрачная встреча в мраморном зале.png" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/Тревожная встреча в лунном лесу.png" alt="Сцена 2" loading="lazy">
+               
+            </figure>
+        </div>
+    </div>
+
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>СЕРИЯ: HALLOWEEN 2026</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ПРЕСЛЕДОВАНИЕ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 24 ГОДА</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 10 ДЕКАБРЯ</span>
+        <span>СТАТУС: НАСЛЕДНИК СЕМЬИ ЭШВОРТ, ЧЛЕН СОВЕТА ДИРЕКТОРОВ СЕМЕЙНОЙ КОМПАНИИ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND RENDELL ASHWORTH ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://share.character.ai/Wv9R/bwp12gwl" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://web.chai-research.com/chat/_bot_3a670504-77b6-4659-82fd-1badd1a8eaaf" target="_blank" rel="noopener noreferrer">CHAI</a>
+                            <a href="https://www.seasoul.ai/character-chat?characterId=dbjem4le878c73dnm4b0" target="_blank" rel="noopener noreferrer">SEASOUL</a>
+                            <a href="https://www.hiwaifu.com/en/robot/25715148" target="_blank" rel="noopener noreferrer">HI WAIFU</a>
+                            <a href="https://janitorai.com/characters/136ab8be-fdb7-4b7b-92a7-5a1f60d625c8_character-rendell-ashworth-halloween" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/DISPIK-promt-Rendell-EHshvort-10-31" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Po-sledam-straha-10-31" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                            <a href="https://t.me/c/3977734082/261" rel="noopener noreferrer">ПОСТ НА КАНАЛЕ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Бастиан Ливьер"
+                data-genres="dark modern"
+                data-tags="морально серый мгг психологический триллер амнезия одержимость абьюзивный мгг обман"
+                data-platforms="character.ai dispik prompt"
+                data-date="2025-12-01">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Бастиан Ливьер">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Bastian-Livière.jpg" alt="Бастиан Ливьер" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">BL</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Бастиан Ливьер</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Очнувшись в затерянном среди бесконечных снегов доме без единого воспоминания о прошлом, она цепляется за заботу Бастиана — мужчины, называющего себя её возлюбленным и спасителем после страшной аварии. Но за его идеальной улыбкой и удушающей нежностью скрывается ледяная пустота, а любая попытка узнать правду о своей прежней жизни натыкается на глухую стену запретов. Когда случайная находка под кроватью доказывает, что за ней годами вели скрытую слежку, иллюзия безопасного убежища рушится, превращая уютный дом в смертельную ловушку, где её тюремщик больше не намерен притворяться любящим.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+        <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ПСИХОЛОГИЧЕСКИЙ ТРИЛЛЕР, АМНЕЗИЯ, ОДЕРЖИМОСТЬ, АБЬЮЗИВНЫЙ МГГ, ОБМАН</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 23 ГОДА</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 27 ДЕКАБРЯ</span>
+        <span>СТАТУС: ОДЕРЖИМЫЙ КУКЛОВОД СО СТЕРТОЙ ЭМПАТИЕЙ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND BASTIEN LIVIÈRE ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://character.ai/chat/6HMvdGxk4EmhnH0kwVI60ea-MVVWH92PqW4uK-85dHA" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://telegra.ph/Bastian-Liver-07-08" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Belaya-tishina-07-08" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+            
+                data-name="Джулиан Колд"
+                data-genres="dark modern"
+                data-tags="морально серый мгг преследование сталкер академия"
+                data-platforms="character.ai janitor ai dispik prompt"
+                data-date="2026-08-30">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Джулиан Колд">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Julian-Cold.png" alt="Джулиан Колд" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">EV</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Джулиан Колд</span>
+                        <span class="character-card-tags">ДАРК · АКАДЕМИЯ</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Случайное появление на закрытой вечеринке элитной «Жестокой Четвёрки» навсегда меняет жизнь первокурсницы, сделав её объектом жуткой одержимости Джулиана Колда. Для холодного социопата, чья душа лишена любых эмоций, её страх, слёзы и паника становятся единственным наркотиком, заставляющим чувствовать себя живым. Анонимные сообщения, преследование в темноте кампуса и удушающее чувство липкого ужаса — Джулиан методично разрушает её границы, превращая её жизнь в безвыходную ловушку, где он выступает одновременно и палачом, и главным кошмаром.</p>
+
+                     <!-- СЮЖЕТНЫЕ КАРТИНКИ -->
+    <div class="story-gallery">
+        <p class="gallery-title">СЮЖЕТНЫЕ КАДРЫ</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="assets/images/JULIANCOLD1.jpeg" alt="Сцена 1" loading="lazy">
+                
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/JULIANCOLD2.jpg" alt="Сцена 2" loading="lazy">
+        </div>
+    </div>
+
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+          <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ПРЕСЛЕДОВАНИЕ, СТАЛКЕР, АКАДЕМИЯ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 19 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 11 МАРТА</span>
+        <span>СТАТУС: ХЛАДНОКРОВНЫЙ СОЦИОПАТ И СТАЛКЕР, ПИТАЮЩИЙСЯ ТВОИМ СТРАХОМ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND RENDELL ASHWORTH ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://character.ai/chat/4E4_v78GdjXpa6qLODB1m47ImLIBSPBpDubIud4FffI" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://janitorai.com/characters/f7c8b278-3f3f-481a-a011-d9cf66a91fdf_character-julian-cold-the-void" target="_blank" rel="noopener noreferrer">JANITOR AI</a>
+                            <a href="https://telegra.ph/Dzhulian-Kold-06-06" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Monstr-06-05-7" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Терон Бьорнссон"
+                data-genres="dark modern"
+                data-tags="морально серый мгг преследование одержимость сильная героиня уличные танцы"
+                data-platforms="character.ai dispik prompt"
+                data-date="2026-08-30">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Терон Бьорнссон">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Theron-Björnsson.jpg" alt="Терон Бьорнссон" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">TB</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Терон Бьорнссон</span>
+                        <span class="character-card-tags">ДАРК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Обычно ему хватало одного взгляда, чтобы девушка сама раздвинула ноги. Но не эта. Она выживает через боль в суставах и грязь на асфальте. Когда их глаза встречаются, он понимает: единственное, что тверже его ствола сейчас — это его член. А единственное, что опаснее её тела — её полное безразличие. Ей плевать на его ствол, на власть, на грязные руки. И он готов на всё, лишь бы заставить её умолять об одном прикосновении.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ДАРК</span>
+          <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: МОРАЛЬНО СЕРЫЙ МГГ, ПРЕСЛЕДОВАНИЕ, ОДЕРЖИМОСТЬ, СИЛЬНАЯ ГЕРОИНЯ, УЛИЧНЫЕ ТАНЦЫ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 29 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 16 МАРТА</span>
+        <span>СТАТУС: МАНИПУЛЯТОР С МИЛЛИАРДАМИ, СЛОМАВШИЙСЯ О ТВОЁ РАВНОДУШИЕ.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND THERON BJORNSSON ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://character.ai/chat/4E4_v78GdjXpa6qLODB1m47ImLIBSPBpDubIud4FffI" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://telegra.ph/Theron-Bjornsson-04-26" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Three-Rotten-Hearts-Theron-Bjornsson-04-26" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Райт Уокер"
+                data-genres="romance modern"
+                data-tags="разница в возрасте неразделённая любовь"
+                data-platforms="character.ai dispik prompt"
+                data-date="2026-04-01">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Терон Бьорнссон">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Wright-Walker.jpg" alt="Райт Уокер" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">WW</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Райт Уокер</span>
+                        <span class="character-card-tags">ROMANCE</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Райт Уокер всю юность прятал за цинизмом и сигаретами одну простую правду: он влюбился в ту, кого любить было нельзя. Когда сводная сестра вышла замуж за другого, он думал, что хуже уже не будет. Пока на её же свадьбе не встретил бывшую учительницу — пьяную, разбитую и цепляющуюся за него, как за единственный якорь. Теперь он стоит перед ней в библиотеке и больше не собирается притворяться, что тот поцелуй ничего не значил.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ROMANCE</span>
+          <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: РАЗНИЦА В ВОЗРАСТЕ, НЕРАЗДЕЛЁННАЯ ЛЮБОВЬ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 22 ГОДА</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 5 МАРТА</span>
+        <span>СТАТУС: БЫВШИЙ УЧЕНИК, РЕШИВШИЙ, ЧТО ТЕПЕРЬ ОН ЗДЕСЬ УСТАНАВЛИВАЕТ ПРАВИЛА.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND WRIGHT WALKER ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://character.ai/chat/1iZBS0KrbK9BdFba1Hwn4b5z2I5-MpCv73PMD_9vFZc" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://telegra.ph/Rajt-Uoker-04-11" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Uchitel-04-10-2" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="character-card"
+                data-name="Оливер Рейн"
+                data-genres="romance modern Glass"
+                data-tags="преданность совместная жизнь сложные отношения"
+                data-platforms="character.ai dispik prompt"
+                data-date="2026-04-28">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Оливер Рейн">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Oliver-Raine.jpg" alt="Оливер Рейн" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">OR</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Оливер Рейн</span>
+                        <span class="character-card-tags">ROMANCE · СТЕКЛО</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Когда-то у Оливера Рейна было всё: любящая семья, блестящее будущее в хоккее и девушка, с которой он мечтал провести всю жизнь. Но после того, как в вашу жизнь ворвалось биполярное расстройство, всё изменилось. Ради тебя Оливер отказался от семьи, карьеры и прежней жизни. Теперь ему двадцать пять, он работает на двух работах, почти не спит и каждый день пытается сохранить то маленькое счастье, которое вы когда-то построили вместе. Ты боишься стать причиной его несчастья, а он боится однажды потерять тебя. И среди бесконечных трудных дней Оливер продолжает возвращаться домой, надеясь, что однажды вы снова сможете просто быть счастливыми. Ведь иногда любовь — это не обещание, что никогда не будет больно, а готовность вместе искать дорогу к более спокойному завтра.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: ROMANCE, СТЕКЛО</span>
+          <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: ПРЕДАННОСТЬ, СОВМЕСТНАЯ ЖИЗНЬ, СЛОЖНЫЕ ОТНОШЕНИЯ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 25 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 8 ИЮНЯ</span>
+        <span>СТАТУС: БЫВШИЙ ХОККЕИСТ, РАБОТАЮЩИЙ НА ДВУХ РАБОТАХ РАДИ СОВМЕСТНОЙ ЖИЗНИ С ТОБОЙ. ПРЕДАННЫЙ ПАРТНЁР.</span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND OLIVER REIN ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://character.ai/chat/gfL4_Opx7lf4eBJD0e_4vJ0OVjMGEeZ0utwbxu0qzuI" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://telegra.ph/Oliver-Raine-04-28" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Zavtra-snova-vyglyanet-solnce-04-28" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="character-card"
+                data-name="Ассасин"
+                data-genres="MiddleAges"
+                data-tags="тайная личность предательство обман сильная героиня"
+                data-platforms="character.ai dispik prompt"
+                data-date="2026-03-11">
+
+                <button class="character-open" type="button" aria-label="Открыть описание: Ассасин">
+                    <span class="character-image-wrap">
+                        <img src="assets/images/Assassin.jpg" alt="Ассасин" class="character-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="character-image-fallback">A</span>
+              
+                    </span>
+                    <span class="character-card-info">
+                        <span class="character-number">CHARACTER</span>
+                        <span class="character-name">Ассасин</span>
+                        <span class="character-card-tags">ДРЕВНИЙ ВОСТОК</span>
+                    </span>
+                </button>
+
+                <div class="character-full-description" hidden>
+                    <p>Пальмира, 271 год н. э. Царство медленно погибает под натиском засухи, голода и таинственного Ордена ассасинов. Чтобы спасти город, старый царь заключает сделку с Повелителем пустыни, отдавая ему в жёны или под власть свою дочь — принцессу, фактически управляющую царством. Четыре месяца она доверяла своему молчаливому телохранителю Оденату, даже не подозревая, что за маской скрывается сам Ассасин. Теперь город пал, дворец горит, а её верный защитник оказался завоевателем, которому предстоит подчинить себе не только Пальмиру, но и её непокорную правительницу.</p>
+
+<div class="modal-meta">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="meta-column meta-left">
+        <span>ЖАНР: MIDDLEAGES</span>
+          <span>АВТОР: A.SEL</span>
+        <span>ТЕГИ: ТАЙНАЯ ЛИЧНОСТЬ, ПРЕДАТЕЛЬСТВО, ОБМАН, СИЛЬНАЯ ГЕРОИНЯ</span>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="meta-column meta-right">
+        <span>ВОЗРАСТ: 30 ЛЕТ</span>
+        <span>ДЕНЬ РОЖДЕНИЯ: 14 ОКТЯБРЯ</span>
+        <span>ГОД СОБЫТИЙ: 271 ГОД Н. Э.</span>
+        <span>СТАТУС: ПОВЕЛИТЕЛЬ ПУСТЫНИ, ГЛАВА ОРДЕНА АССАСИНОВ, ЗАВОЕВАТЕЛЬ ПАЛЬМИРЫ. </span>
+    </div>
+</div>
+                    <div class="character-platforms">
+                        <p class="platforms-title">FIND ASSASSIN ON</p>
+                        <div class="platforms-grid">
+                            <a href="https://character.ai/chat/F-ppV-QcRqCSjz3zZzSoEaOqECT8xGZBp-GfMlKADRo" target="_blank" rel="noopener noreferrer">CHARACTER.AI</a>
+                            <a href="https://telegra.ph/Assassin-05-11-10" target="_blank" rel="noopener noreferrer">DISPIK PROMPT</a>
+                        </div>
+
+                        <div class="character-action-buttons">
+                            <a href="https://telegra.ph/Pod-vlastyu-Assasina-05-11" target="_blank" rel="noopener noreferrer">СЮЖЕТ</a>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            
+
+        </div>
+
+        </div>
+        <p class="empty-state" id="emptyState" hidden>Персонажи не найдены. Попробуйте изменить поиск или фильтры.</p>
+    </section>
+
+   
+</main>
+
+<div class="character-modal" id="characterModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalName">
+        <button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>×</button>
+        <p class="modal-kicker" id="modalKicker"></p>
+        <h2 id="modalName"></h2>
+        <div id="modalDescription" class="modal-description"></div>
+    </section>
+</div>
+
+
+  
+<footer>
+    <div class="footer-links">
+        <a href="https://t.me/+S_ZzktAONec4MThh" target="_blank" rel="noopener noreferrer">TELEGRAM CHANNEL</a>
+        <a href="https://t.me/aselsupportbot" target="_blank" rel="noopener noreferrer">СООБЩИТЬ ОБ ОШИБКЕ</a>
+    </div>
+    <p>© 2026 Project Lorelei: the sex bureau</p>
+</footer>
+
+
+<script src="js/script.js"></script>
+
+
+<div class="favorite-notification" id="favoriteNotification">
+    <div class="achievement-icon">♡</div>
+
+    <div class="achievement-content">
+      
+        <div class="achievement-title">ФАВОРИТ ДОБАВЛЕН</div>
+        <div class="achievement-name" id="notificationText">
+            CHARACTER NAME
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
