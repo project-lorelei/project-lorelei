@@ -268,11 +268,33 @@ body.modal-open {
     transition: .2s;
 }
 
-.filter-option:hover,
+/* FILTER STATES */
+
 .filter-option.active {
     background: #111;
     color: #fff;
     border-color: #111;
+}
+
+/* HOVER ONLY ON DEVICES WITH A MOUSE */
+
+@media (hover: hover) and (pointer: fine) {
+    .filter-option:hover {
+        background: #111;
+        color: #fff;
+        border-color: #111;
+    }
+}
+
+/* MOBILE TAP FIX */
+
+@media (hover: none) {
+    .filter-option:not(.active):hover,
+    .filter-option:not(.active):active {
+        background: transparent;
+        color: #333;
+        border-color: #ccc;
+    }
 }
 
 .catalog-tools {
