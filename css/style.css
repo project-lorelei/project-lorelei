@@ -1823,3 +1823,30 @@ footer .footer-links a:hover {
 }
 
 
+/* =================================
+   MOBILE FILTER STATE FIX
+================================= */
+
+@media (hover: none) {
+
+    .filter-option:not(.filter-more-toggle) {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .filter-option:not(.active):not(.filter-more-toggle),
+    .filter-option:not(.active):not(.filter-more-toggle):hover,
+    .filter-option:not(.active):not(.filter-more-toggle):active,
+    .filter-option:not(.active):not(.filter-more-toggle):focus {
+        background: transparent !important;
+        color: #333 !important;
+        border-color: #ccc !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .filter-option.active:not(.filter-more-toggle) {
+        background: #111 !important;
+        color: #fff !important;
+        border-color: #111 !important;
+    }
+}
